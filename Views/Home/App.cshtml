@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "App";
+}
+
+<div class="text-start">
+    <p>Env: @ViewBag.EnvironmentName</p>
+    <p>Host: @ViewBag.HostName</p>
+    <ul>
+    @foreach (string networkAddr in ViewBag.NetworkAddr)
+    {
+        <li>IP = @networkAddr</li>
+    }
+    </ul>
+</div>
